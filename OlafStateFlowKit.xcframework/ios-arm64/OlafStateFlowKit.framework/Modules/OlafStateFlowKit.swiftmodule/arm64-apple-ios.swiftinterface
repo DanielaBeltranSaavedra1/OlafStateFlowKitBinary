@@ -2,8 +2,203 @@
 // swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios26.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OlafStateFlowKit
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+import Combine
 import Foundation
 import Swift
+import SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public protocol BaseUiState {
+}
+public protocol UiEvent {
+}
+public protocol UiEffect {
+}
+open class MVIDelegate<State, Event, Effect> : Combine.ObservableObject where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect {
+  @Combine.Published @_projectedValueProperty($state) public var state: State {
+    get
+  }
+  public var $state: Combine.Published<State>.Publisher {
+    get
+  }
+  public var effect: Combine.AnyPublisher<Effect, Swift.Never> {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(initialState: State, initEvent: Event? = nil)
+  #endif
+  open func handleEvent(_ event: Event)
+  public func setState(_ transform: (State) -> State)
+  public func sendEvent(_ event: Event)
+  public func setEffect(_ transform: (State) -> Effect)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct ScreenContent<State, Event, Effect, Content> : SwiftUICore.View where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect, Content : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(viewModel: OlafStateFlowKit.MVIDelegate<State, Event, Effect>, isScrollable: Swift.Bool = false, handleEffects: @escaping (Effect) -> Swift.Void = { _ in }, @SwiftUICore.ViewBuilder content: @escaping (State, @escaping (Event) -> Swift.Void) -> Content)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s16OlafStateFlowKit13ScreenContentV4bodyQrvp", 0) __<State, Event, Effect, Content>
+}
+public enum UiState<Data> {
+  case initial
+  case loading
+  case success(value: Data)
+  case empty
+  case businessError(code: Swift.String, message: Swift.String)
+  case systemError(code: Swift.String, message: Swift.String)
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var isError: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var result: Data? {
+    get
+  }
+  #endif
+  public var isLoading: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorMessage: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorCode: Swift.String? {
+    get
+  }
+  #endif
+}
+@_Concurrency.MainActor @preconcurrency public struct AppNavHost : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(coordinator: OlafStateFlowKit.NavigationCoordinator)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s16OlafStateFlowKit10AppNavHostV4bodyQrvp", 0) __
+}
+public protocol Route : Swift.Hashable {
+  var routeId: Swift.String { get }
+}
+public struct NavigateUp : OlafStateFlowKit.Route {
+  public var routeId: Swift.String {
+    get
+  }
+  public init()
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: OlafStateFlowKit.NavigateUp, rhs: OlafStateFlowKit.NavigateUp) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AnyRoute : Swift.Hashable {
+  public let routeId: Swift.String
+  public let graphId: Swift.String
+  public init(routeId: Swift.String, graphId: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: OlafStateFlowKit.AnyRoute, rhs: OlafStateFlowKit.AnyRoute) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Graph {
+  var graphId: Swift.String { get }
+  var routes: [Swift.String] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var startRoute: Swift.String? { get }
+  #endif
+  func buildView(routeId: Swift.String, coordinator: OlafStateFlowKit.NavigationCoordinator) -> SwiftUICore.AnyView
+}
+public protocol Navigator {
+  var graph: any OlafStateFlowKit.Graph { get }
+  var isStartDestination: Swift.Bool { get }
+}
+public struct NavScreenConfiguration {
+  public let destinationRouteId: Swift.String
+  public let popUpToRouteId: Swift.String?
+  public let isPopUpToInclusive: Swift.Bool
+  public let isLaunchSingleTop: Swift.Bool
+  public let clearBackStack: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(destinationRouteId: Swift.String, popUpToRouteId: Swift.String? = nil, isPopUpToInclusive: Swift.Bool = false, isLaunchSingleTop: Swift.Bool = true, clearBackStack: Swift.Bool = false)
+  #endif
+}
+@_Concurrency.MainActor public class NavigationCoordinator : Combine.ObservableObject {
+  @Combine.Published @_projectedValueProperty($navigationPath) @_Concurrency.MainActor public var navigationPath: SwiftUI.NavigationPath {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+  }
+  @_Concurrency.MainActor public var $navigationPath: Combine.Published<SwiftUI.NavigationPath>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor public func configure(navigators: [any OlafStateFlowKit.Navigator])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public func getStartRoute() -> OlafStateFlowKit.AnyRoute?
+  #endif
+  @_Concurrency.MainActor public func getCurrentPath() -> [OlafStateFlowKit.AnyRoute]
+  @_Concurrency.MainActor public func navigate(configuration: OlafStateFlowKit.NavScreenConfiguration)
+  @_Concurrency.MainActor public func navigate(routeId: Swift.String)
+  @_Concurrency.MainActor public func navigateUp()
+  @_Concurrency.MainActor public func popTo(routeId: Swift.String, inclusive: Swift.Bool = false)
+  @_Concurrency.MainActor public func popToRoot()
+  @_Concurrency.MainActor public func buildView(for route: OlafStateFlowKit.AnyRoute) -> SwiftUICore.AnyView
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct RouteInfo {
+  public let graphName: Swift.String
+  public let screenName: Swift.String
+  public init(graphName: Swift.String = "NOT_SET", screenName: Swift.String = "NOT_SET")
+}
+public struct RouteInfoKey : SwiftUICore.EnvironmentKey {
+  public static let defaultValue: OlafStateFlowKit.RouteInfo
+  public typealias Value = OlafStateFlowKit.RouteInfo
+}
+@_Concurrency.MainActor public struct CoordinatorKey : SwiftUICore.EnvironmentKey {
+  @_Concurrency.MainActor public static let defaultValue: OlafStateFlowKit.NavigationCoordinator
+  public typealias Value = OlafStateFlowKit.NavigationCoordinator
+}
+extension SwiftUICore.EnvironmentValues {
+  public var routeInfo: OlafStateFlowKit.RouteInfo {
+    get
+    set
+  }
+  public var coordinator: OlafStateFlowKit.NavigationCoordinator {
+    get
+    set
+  }
+}
+@_hasMissingDesignatedInitializers public class DependencyContainer {
+  public static let shared: OlafStateFlowKit.DependencyContainer
+  public func register<T>(_ type: T.Type, factory: @escaping () -> T)
+  public func register<T>(_ type: T.Type, instance: T)
+  public func registerNavigator(_ navigator: any OlafStateFlowKit.Navigator)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func resolve<T>(_ type: T.Type) -> T?
+  #endif
+  public func resolveNavigators() -> [any OlafStateFlowKit.Navigator]
+  public func getAll<T>(_ type: T.Type) -> [T]
+  @objc deinit
+}
+public protocol Module {
+  func load()
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func onReceiveEffect<Effect>(_ publisher: Combine.AnyPublisher<Effect, Swift.Never>, perform: @escaping (Effect) -> Swift.Void) -> some SwiftUICore.View
+  
+}
+extension OlafStateFlowKit.ScreenContent : Swift.Sendable {}
+extension OlafStateFlowKit.AppNavHost : Swift.Sendable {}
+extension OlafStateFlowKit.NavigationCoordinator : Swift.Sendable {}
+extension OlafStateFlowKit.CoordinatorKey : Swift.Sendable {}

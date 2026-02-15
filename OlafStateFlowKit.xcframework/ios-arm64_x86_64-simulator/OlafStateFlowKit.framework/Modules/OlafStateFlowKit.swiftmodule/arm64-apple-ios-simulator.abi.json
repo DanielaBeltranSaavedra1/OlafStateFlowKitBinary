@@ -6,6 +6,4229 @@
     "children": [
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BaseUiState",
+        "printedName": "BaseUiState",
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit06BaseUiB0P",
+        "mangledName": "$s16OlafStateFlowKit06BaseUiB0P",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UiEvent",
+        "printedName": "UiEvent",
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit7UiEventP",
+        "mangledName": "$s16OlafStateFlowKit7UiEventP",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UiEffect",
+        "printedName": "UiEffect",
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit8UiEffectP",
+        "mangledName": "$s16OlafStateFlowKit8UiEffectP",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MVIDelegate",
+        "printedName": "MVIDelegate",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC5statexvp",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC5statexvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit11MVIDelegateC5statexvg",
+                "mangledName": "$s16OlafStateFlowKit11MVIDelegateC5statexvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+                "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$state",
+            "printedName": "$state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<τ_0_0>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC6$state7Combine9PublishedV9PublisherVyx_Gvp",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6$state7Combine9PublishedV9PublisherVyx_Gvp",
+            "moduleName": "OlafStateFlowKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<τ_0_0>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit11MVIDelegateC6$state7Combine9PublishedV9PublisherVyx_Gvg",
+                "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6$state7Combine9PublishedV9PublisherVyx_Gvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+                "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "effect",
+            "printedName": "effect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_0_2, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC6effect7Combine12AnyPublisherVyq0_s5NeverOGvp",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6effect7Combine12AnyPublisherVyq0_s5NeverOGvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<τ_0_2, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_2"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit11MVIDelegateC6effect7Combine12AnyPublisherVyq0_s5NeverOGvg",
+                "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6effect7Combine12AnyPublisherVyq0_s5NeverOGvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+                "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(initialState:initEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MVIDelegate",
+                "printedName": "OlafStateFlowKit.MVIDelegate<τ_0_0, τ_0_1, τ_0_2>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  }
+                ],
+                "usr": "s:16OlafStateFlowKit11MVIDelegateC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC07initialB09initEventACyxq_q0_Gx_q_Sgtcfc",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC07initialB09initEventACyxq_q0_Gx_q_Sgtcfc",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+            "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "handleEvent",
+            "printedName": "handleEvent(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_1"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC11handleEventyyq_F",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC11handleEventyyq_F",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+            "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setState",
+            "printedName": "setState(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0) -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC03setB0yyxxXEF",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC03setB0yyxxXEF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+            "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_1"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC9sendEventyyq_F",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC9sendEventyyq_F",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+            "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setEffect",
+            "printedName": "setEffect(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0) -> τ_0_2",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit11MVIDelegateC9setEffectyyq0_xXEF",
+            "mangledName": "$s16OlafStateFlowKit11MVIDelegateC9setEffectyyq0_xXEF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+            "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16OlafStateFlowKit11MVIDelegateC",
+        "mangledName": "$s16OlafStateFlowKit11MVIDelegateC",
+        "moduleName": "OlafStateFlowKit",
+        "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
+        "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenContent",
+        "printedName": "ScreenContent",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(viewModel:isScrollable:handleEffects:content:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenContent",
+                "printedName": "OlafStateFlowKit.ScreenContent<τ_0_0, τ_0_1, τ_0_2, τ_0_3>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_3"
+                  }
+                ],
+                "usr": "s:16OlafStateFlowKit13ScreenContentV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MVIDelegate",
+                "printedName": "OlafStateFlowKit.MVIDelegate<τ_0_0, τ_0_1, τ_0_2>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  }
+                ],
+                "usr": "s:16OlafStateFlowKit11MVIDelegateC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_2) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_2"
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, @escaping (τ_0_1) -> ()) -> τ_0_3",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_3"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, (τ_0_1) -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_1) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit13ScreenContentV9viewModel12isScrollable13handleEffects7contentACyxq_q0_q1_GAA11MVIDelegateCyxq_q0_G_Sbyq0_cq1_x_yq_ctctcfc",
+            "mangledName": "$s16OlafStateFlowKit13ScreenContentV9viewModel12isScrollable13handleEffects7contentACyxq_q0_q1_GAA11MVIDelegateCyxq_q0_G_Sbyq0_cq1_x_yq_ctctcfc",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_0_1, τ_0_2, τ_0_3 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect, τ_0_3 : SwiftUI.View>",
+            "sugared_genericSig": "<State, Event, Effect, Content where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect, Content : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit13ScreenContentV4bodyQrvp",
+            "mangledName": "$s16OlafStateFlowKit13ScreenContentV4bodyQrvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit13ScreenContentV4bodyQrvg",
+                "mangledName": "$s16OlafStateFlowKit13ScreenContentV4bodyQrvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0, τ_0_1, τ_0_2, τ_0_3 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect, τ_0_3 : SwiftUI.View>",
+                "sugared_genericSig": "<State, Event, Effect, Content where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect, Content : SwiftUI.View>",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit13ScreenContentV",
+        "mangledName": "$s16OlafStateFlowKit13ScreenContentV",
+        "moduleName": "OlafStateFlowKit",
+        "genericSig": "<τ_0_0, τ_0_1, τ_0_2, τ_0_3 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect, τ_0_3 : SwiftUI.View>",
+        "sugared_genericSig": "<State, Event, Effect, Content where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect, Content : SwiftUI.View>",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UiState",
+        "printedName": "UiState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "initial",
+            "printedName": "initial",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiState",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:16OlafStateFlowKit02UiB0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O7initialyACyxGAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O7initialyACyxGAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "loading",
+            "printedName": "loading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiState",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:16OlafStateFlowKit02UiB0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O7loadingyACyxGAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O7loadingyACyxGAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> (τ_0_0) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0) -> OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(value: τ_0_0)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O7successyACyxGx_tcAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O7successyACyxGx_tcAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "empty",
+            "printedName": "empty",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiState",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:16OlafStateFlowKit02UiB0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O5emptyyACyxGAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O5emptyyACyxGAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "businessError",
+            "printedName": "businessError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> (Swift.String, Swift.String) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(code: Swift.String, message: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O13businessErroryACyxGSS_SStcAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O13businessErroryACyxGSS_SStcAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "systemError",
+            "printedName": "systemError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (OlafStateFlowKit.UiState<τ_0_0>.Type) -> (Swift.String, Swift.String) -> OlafStateFlowKit.UiState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> OlafStateFlowKit.UiState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(code: Swift.String, message: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OlafStateFlowKit.UiState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiState",
+                        "printedName": "OlafStateFlowKit.UiState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:16OlafStateFlowKit02UiB0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16OlafStateFlowKit02UiB0O11systemErroryACyxGSS_SStcAEmlF",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O11systemErroryACyxGSS_SStcAEmlF",
+            "moduleName": "OlafStateFlowKit"
+          },
+          {
+            "kind": "Var",
+            "name": "isSuccess",
+            "printedName": "isSuccess",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O9isSuccessSbvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O9isSuccessSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O9isSuccessSbvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O9isSuccessSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEmpty",
+            "printedName": "isEmpty",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O7isEmptySbvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O7isEmptySbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O7isEmptySbvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O7isEmptySbvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isError",
+            "printedName": "isError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O7isErrorSbvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O7isErrorSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O7isErrorSbvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O7isErrorSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O6resultxSgvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O6resultxSgvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O6resultxSgvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O6resultxSgvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLoading",
+            "printedName": "isLoading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O9isLoadingSbvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O9isLoadingSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O9isLoadingSbvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O9isLoadingSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorMessage",
+            "printedName": "errorMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O12errorMessageSSSgvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O12errorMessageSSSgvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O12errorMessageSSSgvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O12errorMessageSSSgvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorCode",
+            "printedName": "errorCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit02UiB0O9errorCodeSSSgvp",
+            "mangledName": "$s16OlafStateFlowKit02UiB0O9errorCodeSSSgvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit02UiB0O9errorCodeSSSgvg",
+                "mangledName": "$s16OlafStateFlowKit02UiB0O9errorCodeSSSgvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Data>",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16OlafStateFlowKit02UiB0O",
+        "mangledName": "$s16OlafStateFlowKit02UiB0O",
+        "moduleName": "OlafStateFlowKit",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Data>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppNavHost",
+        "printedName": "AppNavHost",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coordinator:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppNavHost",
+                "printedName": "OlafStateFlowKit.AppNavHost",
+                "usr": "s:16OlafStateFlowKit10AppNavHostV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationCoordinator",
+                "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit10AppNavHostV11coordinatorAcA21NavigationCoordinatorC_tcfc",
+            "mangledName": "$s16OlafStateFlowKit10AppNavHostV11coordinatorAcA21NavigationCoordinatorC_tcfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit10AppNavHostV4bodyQrvp",
+            "mangledName": "$s16OlafStateFlowKit10AppNavHostV4bodyQrvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit10AppNavHostV4bodyQrvg",
+                "mangledName": "$s16OlafStateFlowKit10AppNavHostV4bodyQrvg",
+                "moduleName": "OlafStateFlowKit",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit10AppNavHostV",
+        "mangledName": "$s16OlafStateFlowKit10AppNavHostV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OlafStateFlowKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Route",
+        "printedName": "Route",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "routeId",
+            "printedName": "routeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit5RouteP7routeIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit5RouteP7routeIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit5RouteP7routeIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit5RouteP7routeIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Route>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Route>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit5RouteP",
+        "mangledName": "$s16OlafStateFlowKit5RouteP",
+        "moduleName": "OlafStateFlowKit",
+        "genericSig": "<τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Self : Swift.Hashable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigateUp",
+        "printedName": "NavigateUp",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "routeId",
+            "printedName": "routeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit10NavigateUpV7routeIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit10NavigateUpV7routeIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit10NavigateUpV7routeIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit10NavigateUpV7routeIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigateUp",
+                "printedName": "OlafStateFlowKit.NavigateUp",
+                "usr": "s:16OlafStateFlowKit10NavigateUpV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit10NavigateUpVACycfc",
+            "mangledName": "$s16OlafStateFlowKit10NavigateUpVACycfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit10NavigateUpV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16OlafStateFlowKit10NavigateUpV4hash4intoys6HasherVz_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigateUp",
+                "printedName": "OlafStateFlowKit.NavigateUp",
+                "usr": "s:16OlafStateFlowKit10NavigateUpV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigateUp",
+                "printedName": "OlafStateFlowKit.NavigateUp",
+                "usr": "s:16OlafStateFlowKit10NavigateUpV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit10NavigateUpV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16OlafStateFlowKit10NavigateUpV2eeoiySbAC_ACtFZ",
+            "moduleName": "OlafStateFlowKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit10NavigateUpV9hashValueSivp",
+            "mangledName": "$s16OlafStateFlowKit10NavigateUpV9hashValueSivp",
+            "moduleName": "OlafStateFlowKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit10NavigateUpV9hashValueSivg",
+                "mangledName": "$s16OlafStateFlowKit10NavigateUpV9hashValueSivg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit10NavigateUpV",
+        "mangledName": "$s16OlafStateFlowKit10NavigateUpV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Route",
+            "printedName": "Route",
+            "usr": "s:16OlafStateFlowKit5RouteP",
+            "mangledName": "$s16OlafStateFlowKit5RouteP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyRoute",
+        "printedName": "AnyRoute",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "routeId",
+            "printedName": "routeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV7routeIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV7routeIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV7routeIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit8AnyRouteV7routeIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "graphId",
+            "printedName": "graphId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV7graphIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV7graphIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV7graphIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit8AnyRouteV7graphIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(routeId:graphId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyRoute",
+                "printedName": "OlafStateFlowKit.AnyRoute",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV7routeId05graphH0ACSS_SStcfc",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV7routeId05graphH0ACSS_SStcfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV4hash4intoys6HasherVz_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyRoute",
+                "printedName": "OlafStateFlowKit.AnyRoute",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyRoute",
+                "printedName": "OlafStateFlowKit.AnyRoute",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV2eeoiySbAC_ACtFZ",
+            "moduleName": "OlafStateFlowKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit8AnyRouteV9hashValueSivp",
+            "mangledName": "$s16OlafStateFlowKit8AnyRouteV9hashValueSivp",
+            "moduleName": "OlafStateFlowKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV9hashValueSivg",
+                "mangledName": "$s16OlafStateFlowKit8AnyRouteV9hashValueSivg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit8AnyRouteV",
+        "mangledName": "$s16OlafStateFlowKit8AnyRouteV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Graph",
+        "printedName": "Graph",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "graphId",
+            "printedName": "graphId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit5GraphP7graphIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit5GraphP7graphIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit5GraphP7graphIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit5GraphP7graphIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Graph>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Graph>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "routes",
+            "printedName": "routes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit5GraphP6routesSaySSGvp",
+            "mangledName": "$s16OlafStateFlowKit5GraphP6routesSaySSGvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit5GraphP6routesSaySSGvg",
+                "mangledName": "$s16OlafStateFlowKit5GraphP6routesSaySSGvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Graph>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Graph>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startRoute",
+            "printedName": "startRoute",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit5GraphP10startRouteSSSgvp",
+            "mangledName": "$s16OlafStateFlowKit5GraphP10startRouteSSSgvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit5GraphP10startRouteSSSgvg",
+                "mangledName": "$s16OlafStateFlowKit5GraphP10startRouteSSSgvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Graph>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Graph>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "buildView",
+            "printedName": "buildView(routeId:coordinator:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyView",
+                "printedName": "SwiftUI.AnyView",
+                "usr": "s:7SwiftUI7AnyViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationCoordinator",
+                "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit5GraphP9buildView7routeId11coordinator7SwiftUI03AnyG0VSS_AA21NavigationCoordinatorCtF",
+            "mangledName": "$s16OlafStateFlowKit5GraphP9buildView7routeId11coordinator7SwiftUI03AnyG0VSS_AA21NavigationCoordinatorCtF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Graph>",
+            "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Graph>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit5GraphP",
+        "mangledName": "$s16OlafStateFlowKit5GraphP",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Navigator",
+        "printedName": "Navigator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "graph",
+            "printedName": "graph",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Graph",
+                "printedName": "any OlafStateFlowKit.Graph",
+                "usr": "s:16OlafStateFlowKit5GraphP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit9NavigatorP5graphAA5Graph_pvp",
+            "mangledName": "$s16OlafStateFlowKit9NavigatorP5graphAA5Graph_pvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Graph",
+                    "printedName": "any OlafStateFlowKit.Graph",
+                    "usr": "s:16OlafStateFlowKit5GraphP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit9NavigatorP5graphAA5Graph_pvg",
+                "mangledName": "$s16OlafStateFlowKit9NavigatorP5graphAA5Graph_pvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Navigator>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Navigator>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isStartDestination",
+            "printedName": "isStartDestination",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit9NavigatorP18isStartDestinationSbvp",
+            "mangledName": "$s16OlafStateFlowKit9NavigatorP18isStartDestinationSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit9NavigatorP18isStartDestinationSbvg",
+                "mangledName": "$s16OlafStateFlowKit9NavigatorP18isStartDestinationSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Navigator>",
+                "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Navigator>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit9NavigatorP",
+        "mangledName": "$s16OlafStateFlowKit9NavigatorP",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavScreenConfiguration",
+        "printedName": "NavScreenConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "destinationRouteId",
+            "printedName": "destinationRouteId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteIdSSvp",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteIdSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteIdSSvg",
+                "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteIdSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "popUpToRouteId",
+            "printedName": "popUpToRouteId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV14popUpToRouteIdSSSgvp",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV14popUpToRouteIdSSSgvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV14popUpToRouteIdSSSgvg",
+                "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV14popUpToRouteIdSSSgvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isPopUpToInclusive",
+            "printedName": "isPopUpToInclusive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV18isPopUpToInclusiveSbvp",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV18isPopUpToInclusiveSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV18isPopUpToInclusiveSbvg",
+                "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV18isPopUpToInclusiveSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLaunchSingleTop",
+            "printedName": "isLaunchSingleTop",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV17isLaunchSingleTopSbvp",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV17isLaunchSingleTopSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV17isLaunchSingleTopSbvg",
+                "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV17isLaunchSingleTopSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "clearBackStack",
+            "printedName": "clearBackStack",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV14clearBackStackSbvp",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV14clearBackStackSbvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV14clearBackStackSbvg",
+                "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV14clearBackStackSbvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(destinationRouteId:popUpToRouteId:isPopUpToInclusive:isLaunchSingleTop:clearBackStack:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavScreenConfiguration",
+                "printedName": "OlafStateFlowKit.NavScreenConfiguration",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteId07popUpToiJ005isPoplM9Inclusive0N15LaunchSingleTop14clearBackStackACSS_SSSgS3btcfc",
+            "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV18destinationRouteId07popUpToiJ005isPoplM9Inclusive0N15LaunchSingleTop14clearBackStackACSS_SSSgS3btcfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV",
+        "mangledName": "$s16OlafStateFlowKit22NavScreenConfigurationV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationCoordinator",
+        "printedName": "NavigationCoordinator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "navigationPath",
+            "printedName": "navigationPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationPath",
+                "printedName": "SwiftUI.NavigationPath",
+                "usr": "s:7SwiftUI14NavigationPathV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvp",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationPath",
+                    "printedName": "SwiftUI.NavigationPath",
+                    "usr": "s:7SwiftUI14NavigationPathV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvg",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationPath",
+                    "printedName": "SwiftUI.NavigationPath",
+                    "usr": "s:7SwiftUI14NavigationPathV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvs",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0Vvs",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0VvM",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC14navigationPath7SwiftUI0eH0VvM",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$navigationPath",
+            "printedName": "$navigationPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<SwiftUI.NavigationPath>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvp",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvp",
+            "moduleName": "OlafStateFlowKit",
+            "implicit": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<SwiftUI.NavigationPath>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvg",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<SwiftUI.NavigationPath>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvs",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_Gvs",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_GvM",
+                "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC15$navigationPath7Combine9PublishedV9PublisherVy7SwiftUI0eH0V_GvM",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationCoordinator",
+                "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorCACycfc",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorCACycfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(navigators:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any OlafStateFlowKit.Navigator]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Navigator",
+                    "printedName": "any OlafStateFlowKit.Navigator",
+                    "usr": "s:16OlafStateFlowKit9NavigatorP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC9configure10navigatorsySayAA9Navigator_pG_tF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC9configure10navigatorsySayAA9Navigator_pG_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getStartRoute",
+            "printedName": "getStartRoute()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OlafStateFlowKit.AnyRoute?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyRoute",
+                    "printedName": "OlafStateFlowKit.AnyRoute",
+                    "usr": "s:16OlafStateFlowKit8AnyRouteV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC13getStartRouteAA03AnyI0VSgyF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC13getStartRouteAA03AnyI0VSgyF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentPath",
+            "printedName": "getCurrentPath()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[OlafStateFlowKit.AnyRoute]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyRoute",
+                    "printedName": "OlafStateFlowKit.AnyRoute",
+                    "usr": "s:16OlafStateFlowKit8AnyRouteV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC14getCurrentPathSayAA8AnyRouteVGyF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC14getCurrentPathSayAA8AnyRouteVGyF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "navigate",
+            "printedName": "navigate(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavScreenConfiguration",
+                "printedName": "OlafStateFlowKit.NavScreenConfiguration",
+                "usr": "s:16OlafStateFlowKit22NavScreenConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC8navigate13configurationyAA22NavScreenConfigurationV_tF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC8navigate13configurationyAA22NavScreenConfigurationV_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "navigate",
+            "printedName": "navigate(routeId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC8navigate7routeIdySS_tF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC8navigate7routeIdySS_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "navigateUp",
+            "printedName": "navigateUp()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC10navigateUpyyF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC10navigateUpyyF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "popTo",
+            "printedName": "popTo(routeId:inclusive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC5popTo7routeId9inclusiveySS_SbtF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC5popTo7routeId9inclusiveySS_SbtF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "popToRoot",
+            "printedName": "popToRoot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC9popToRootyyF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC9popToRootyyF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildView",
+            "printedName": "buildView(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyView",
+                "printedName": "SwiftUI.AnyView",
+                "usr": "s:7SwiftUI7AnyViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyRoute",
+                "printedName": "OlafStateFlowKit.AnyRoute",
+                "usr": "s:16OlafStateFlowKit8AnyRouteV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC9buildView3for7SwiftUI03AnyH0VAA0L5RouteV_tF",
+            "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC9buildView3for7SwiftUI03AnyH0VAA0L5RouteV_tF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC",
+        "mangledName": "$s16OlafStateFlowKit21NavigationCoordinatorC",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RouteInfo",
+        "printedName": "RouteInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "graphName",
+            "printedName": "graphName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit9RouteInfoV9graphNameSSvp",
+            "mangledName": "$s16OlafStateFlowKit9RouteInfoV9graphNameSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit9RouteInfoV9graphNameSSvg",
+                "mangledName": "$s16OlafStateFlowKit9RouteInfoV9graphNameSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenName",
+            "printedName": "screenName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit9RouteInfoV10screenNameSSvp",
+            "mangledName": "$s16OlafStateFlowKit9RouteInfoV10screenNameSSvp",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit9RouteInfoV10screenNameSSvg",
+                "mangledName": "$s16OlafStateFlowKit9RouteInfoV10screenNameSSvg",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(graphName:screenName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RouteInfo",
+                "printedName": "OlafStateFlowKit.RouteInfo",
+                "usr": "s:16OlafStateFlowKit9RouteInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OlafStateFlowKit9RouteInfoV9graphName06screenH0ACSS_SStcfc",
+            "mangledName": "$s16OlafStateFlowKit9RouteInfoV9graphName06screenH0ACSS_SStcfc",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit9RouteInfoV",
+        "mangledName": "$s16OlafStateFlowKit9RouteInfoV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RouteInfoKey",
+        "printedName": "RouteInfoKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "defaultValue",
+            "printedName": "defaultValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RouteInfo",
+                "printedName": "OlafStateFlowKit.RouteInfo",
+                "usr": "s:16OlafStateFlowKit9RouteInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit12RouteInfoKeyV12defaultValueAA0eF0VvpZ",
+            "mangledName": "$s16OlafStateFlowKit12RouteInfoKeyV12defaultValueAA0eF0VvpZ",
+            "moduleName": "OlafStateFlowKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RouteInfo",
+                    "printedName": "OlafStateFlowKit.RouteInfo",
+                    "usr": "s:16OlafStateFlowKit9RouteInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit12RouteInfoKeyV12defaultValueAA0eF0VvgZ",
+                "mangledName": "$s16OlafStateFlowKit12RouteInfoKeyV12defaultValueAA0eF0VvgZ",
+                "moduleName": "OlafStateFlowKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit12RouteInfoKeyV",
+        "mangledName": "$s16OlafStateFlowKit12RouteInfoKeyV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentKey",
+            "printedName": "EnvironmentKey",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RouteInfo",
+                    "printedName": "OlafStateFlowKit.RouteInfo",
+                    "usr": "s:16OlafStateFlowKit9RouteInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI14EnvironmentKeyP",
+            "mangledName": "$s7SwiftUI14EnvironmentKeyP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CoordinatorKey",
+        "printedName": "CoordinatorKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "defaultValue",
+            "printedName": "defaultValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationCoordinator",
+                "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit14CoordinatorKeyV12defaultValueAA010NavigationE0CvpZ",
+            "mangledName": "$s16OlafStateFlowKit14CoordinatorKeyV12defaultValueAA010NavigationE0CvpZ",
+            "moduleName": "OlafStateFlowKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationCoordinator",
+                    "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                    "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit14CoordinatorKeyV12defaultValueAA010NavigationE0CvgZ",
+                "mangledName": "$s16OlafStateFlowKit14CoordinatorKeyV12defaultValueAA010NavigationE0CvgZ",
+                "moduleName": "OlafStateFlowKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16OlafStateFlowKit14CoordinatorKeyV",
+        "mangledName": "$s16OlafStateFlowKit14CoordinatorKeyV",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentKey",
+            "printedName": "EnvironmentKey",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationCoordinator",
+                    "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                    "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI14EnvironmentKeyP",
+            "mangledName": "$s7SwiftUI14EnvironmentKeyP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DependencyContainer",
+        "printedName": "DependencyContainer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependencyContainer",
+                "printedName": "OlafStateFlowKit.DependencyContainer",
+                "usr": "s:16OlafStateFlowKit19DependencyContainerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC6sharedACvpZ",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC6sharedACvpZ",
+            "moduleName": "OlafStateFlowKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependencyContainer",
+                    "printedName": "OlafStateFlowKit.DependencyContainer",
+                    "usr": "s:16OlafStateFlowKit19DependencyContainerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16OlafStateFlowKit19DependencyContainerC6sharedACvgZ",
+                "mangledName": "$s16OlafStateFlowKit19DependencyContainerC6sharedACvgZ",
+                "moduleName": "OlafStateFlowKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(_:factory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC8register_7factoryyxm_xyctlF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC8register_7factoryyxm_xyctlF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(_:instance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC8register_8instanceyxm_xtlF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC8register_8instanceyxm_xtlF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerNavigator",
+            "printedName": "registerNavigator(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Navigator",
+                "printedName": "any OlafStateFlowKit.Navigator",
+                "usr": "s:16OlafStateFlowKit9NavigatorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC17registerNavigatoryyAA0H0_pF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC17registerNavigatoryyAA0H0_pF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC7resolveyxSgxmlF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC7resolveyxSgxmlF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resolveNavigators",
+            "printedName": "resolveNavigators()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any OlafStateFlowKit.Navigator]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Navigator",
+                    "printedName": "any OlafStateFlowKit.Navigator",
+                    "usr": "s:16OlafStateFlowKit9NavigatorP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC17resolveNavigatorsSayAA9Navigator_pGyF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC17resolveNavigatorsSayAA9Navigator_pGyF",
+            "moduleName": "OlafStateFlowKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAll",
+            "printedName": "getAll(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit19DependencyContainerC6getAllySayxGxmlF",
+            "mangledName": "$s16OlafStateFlowKit19DependencyContainerC6getAllySayxGxmlF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16OlafStateFlowKit19DependencyContainerC",
+        "mangledName": "$s16OlafStateFlowKit19DependencyContainerC",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Module",
+        "printedName": "Module",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16OlafStateFlowKit6ModuleP4loadyyF",
+            "mangledName": "$s16OlafStateFlowKit6ModuleP4loadyyF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : OlafStateFlowKit.Module>",
+            "sugared_genericSig": "<Self where Self : OlafStateFlowKit.Module>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16OlafStateFlowKit6ModuleP",
+        "mangledName": "$s16OlafStateFlowKit6ModuleP",
+        "moduleName": "OlafStateFlowKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -13,9 +4236,457 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EnvironmentValues",
+        "printedName": "EnvironmentValues",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "routeInfo",
+            "printedName": "routeInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RouteInfo",
+                "printedName": "OlafStateFlowKit.RouteInfo",
+                "usr": "s:16OlafStateFlowKit9RouteInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvp",
+            "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvp",
+            "moduleName": "OlafStateFlowKit",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RouteInfo",
+                    "printedName": "OlafStateFlowKit.RouteInfo",
+                    "usr": "s:16OlafStateFlowKit9RouteInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvg",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvg",
+                "moduleName": "OlafStateFlowKit",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RouteInfo",
+                    "printedName": "OlafStateFlowKit.RouteInfo",
+                    "usr": "s:16OlafStateFlowKit9RouteInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvs",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0Vvs",
+                "moduleName": "OlafStateFlowKit",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0VvM",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE9routeInfoAD05RouteJ0VvM",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "coordinator",
+            "printedName": "coordinator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationCoordinator",
+                "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvp",
+            "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvp",
+            "moduleName": "OlafStateFlowKit",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationCoordinator",
+                    "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                    "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvg",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvg",
+                "moduleName": "OlafStateFlowKit",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationCoordinator",
+                    "printedName": "OlafStateFlowKit.NavigationCoordinator",
+                    "usr": "s:16OlafStateFlowKit21NavigationCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvs",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvs",
+                "moduleName": "OlafStateFlowKit",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvM",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV16OlafStateFlowKitE11coordinatorAD21NavigationCoordinatorCvM",
+                "moduleName": "OlafStateFlowKit",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SwiftUI17EnvironmentValuesV",
+        "mangledName": "$s7SwiftUI17EnvironmentValuesV",
+        "moduleName": "SwiftUICore",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onReceiveEffect",
+            "printedName": "onReceiveEffect(_:perform:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_1_0, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_1_0) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP16OlafStateFlowKitE15onReceiveEffect_7performQr7Combine12AnyPublisherVyqd__s5NeverOG_yqd__ctlF",
+            "mangledName": "$s7SwiftUI4ViewP16OlafStateFlowKitE15onReceiveEffect_7performQr7Combine12AnyPublisherVyqd__s5NeverOG_yqd__ctlF",
+            "moduleName": "OlafStateFlowKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self, Effect where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUICore",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "TypeEraser",
+          "TypeEraser",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Custom"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
   },
-  "ConstValues": []
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/MviState\/ScreenContent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 462,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1734,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1775,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1812,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "Dictionary",
+      "offset": 2336,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "Array",
+      "offset": 2417,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2455,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5152,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "StringLiteral",
+      "offset": 6881,
+      "length": 9,
+      "value": "\"NOT_SET\""
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "StringLiteral",
+      "offset": 6913,
+      "length": 9,
+      "value": "\"NOT_SET\""
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "Dictionary",
+      "offset": 7703,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/daniela.beltran\/Documents\/OlafStateFlowKit\/OlafStateFlowKit\/Navigation\/Navigation.swift",
+      "kind": "Array",
+      "offset": 7749,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
 }
