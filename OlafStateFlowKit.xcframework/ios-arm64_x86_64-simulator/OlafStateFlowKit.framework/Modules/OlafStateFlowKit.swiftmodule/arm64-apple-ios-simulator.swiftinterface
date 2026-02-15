@@ -15,23 +15,23 @@ public protocol UiEvent {
 }
 public protocol UiEffect {
 }
-open class MVIDelegate<State, Event, Effect> : Combine.ObservableObject where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect {
-  @Combine.Published @_projectedValueProperty($state) public var state: State {
+@_Concurrency.MainActor open class MVIDelegate<State, Event, Effect> : Combine.ObservableObject where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect {
+  @Combine.Published @_projectedValueProperty($state) @_Concurrency.MainActor public var state: State {
     get
   }
-  public var $state: Combine.Published<State>.Publisher {
+  @_Concurrency.MainActor public var $state: Combine.Published<State>.Publisher {
     get
   }
-  public var effect: Combine.AnyPublisher<Effect, Swift.Never> {
+  @_Concurrency.MainActor public var effect: Combine.AnyPublisher<Effect, Swift.Never> {
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(initialState: State, initEvent: Event? = nil)
+  @_Concurrency.MainActor public init(initialState: State, initEvent: Event? = nil)
   #endif
-  open func handleEvent(_ event: Event)
-  public func setState(_ transform: (State) -> State)
-  public func sendEvent(_ event: Event)
-  public func setEffect(_ transform: (State) -> Effect)
+  @_Concurrency.MainActor open func handleEvent(_ event: Event)
+  @_Concurrency.MainActor public func setState(_ transform: (State) -> State)
+  @_Concurrency.MainActor public func sendEvent(_ event: Event)
+  @_Concurrency.MainActor public func setEffect(_ transform: (State) -> Effect)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -198,6 +198,7 @@ extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func onReceiveEffect<Effect>(_ publisher: Combine.AnyPublisher<Effect, Swift.Never>, perform: @escaping (Effect) -> Swift.Void) -> some SwiftUICore.View
   
 }
+extension OlafStateFlowKit.MVIDelegate : Swift.Sendable {}
 extension OlafStateFlowKit.ScreenContent : Swift.Sendable {}
 extension OlafStateFlowKit.AppNavHost : Swift.Sendable {}
 extension OlafStateFlowKit.NavigationCoordinator : Swift.Sendable {}

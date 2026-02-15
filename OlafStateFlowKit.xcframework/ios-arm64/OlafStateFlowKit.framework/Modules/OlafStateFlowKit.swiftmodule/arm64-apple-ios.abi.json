@@ -126,6 +126,7 @@
             "mangledName": "$s16OlafStateFlowKit11MVIDelegateC5statexvp",
             "moduleName": "OlafStateFlowKit",
             "declAttributes": [
+              "Custom",
               "ProjectedValueProperty",
               "SetterAccess",
               "AccessControl",
@@ -172,6 +173,9 @@
             "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6$state7Combine9PublishedV9PublisherVyx_Gvp",
             "moduleName": "OlafStateFlowKit",
             "implicit": true,
+            "declAttributes": [
+              "Custom"
+            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -226,6 +230,7 @@
             "mangledName": "$s16OlafStateFlowKit11MVIDelegateC6effect7Combine12AnyPublisherVyq0_s5NeverOGvp",
             "moduleName": "OlafStateFlowKit",
             "declAttributes": [
+              "Custom",
               "AccessControl"
             ],
             "accessors": [
@@ -319,6 +324,7 @@
             "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
             "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -348,6 +354,7 @@
             "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
             "isOpen": true,
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -391,6 +398,7 @@
             "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
             "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -419,6 +427,7 @@
             "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
             "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -462,6 +471,7 @@
             "genericSig": "<τ_0_0, τ_0_1, τ_0_2 where τ_0_0 : OlafStateFlowKit.BaseUiState, τ_0_1 : OlafStateFlowKit.UiEvent, τ_0_2 : OlafStateFlowKit.UiEffect>",
             "sugared_genericSig": "<State, Event, Effect where State : OlafStateFlowKit.BaseUiState, Event : OlafStateFlowKit.UiEvent, Effect : OlafStateFlowKit.UiEffect>",
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -477,6 +487,7 @@
         "isOpen": true,
         "declAttributes": [
           "AccessControl",
+          "Custom",
           "RawDocComment"
         ],
         "conformances": [
@@ -515,6 +526,13 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
