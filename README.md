@@ -911,5 +911,5 @@ Questions or issues? Open an issue! 🚀
 
 ## 📝 Author & Updates
 
-**Author:** [Daniela Beltran]([https://tusitio.com](https://www.linkedin.com/in/danielabeltransaavedra/)
+**Author:** [Daniela Beltran](https://www.linkedin.com/in/danielabeltransaavedra/)
 **Last Updated:** February 15, 2026
